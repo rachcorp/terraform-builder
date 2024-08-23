@@ -11,3 +11,91 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+  /* min-width: 200%; Ensure the content is wide enough to scroll */
+}
+
+.relative::before,
+.relative::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+
+.relative::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.relative::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+/* Dark mode versions */
+.dark .relative::before {
+  background: linear-gradient(to right, rgba(31,41,55,1), rgba(31,41,55,0));
+}
+
+.dark .relative::after {
+  background: linear-gradient(to left, rgba(31,41,55,1), rgba(31,41,55,0));
+}
+
+.logo-scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 10px 0;
+}
+
+.logo-scroll-container::before,
+.logo-scroll-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logo-scroll-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.logo-scroll-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.dark .logo-scroll-container::before {
+  background: linear-gradient(to right, rgba(31,41,55,1), rgba(31,41,55,0));
+}
+
+.dark .logo-scroll-container::after {
+  background: linear-gradient(to left, rgba(31,41,55,1), rgba(31,41,55,0));
+}
+
+.logo-scroll {
+  display: inline-block;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
