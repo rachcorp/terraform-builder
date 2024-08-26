@@ -170,7 +170,7 @@ export default function LandingPage() {
             
       <section className={`py-16 ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">Used by 10s of thousands of engineers working at</h2>
+          <h2 className="text-3xl font-bold mb-8">Used by 1000s of engineers working at</h2>
           <RollingLogos />
         </div>
       </section>
