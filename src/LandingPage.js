@@ -17,21 +17,47 @@ const useCases = [
 ];
 
 const faqs = [
+
+  
   {
-    question: 'What is the Terraform Template Builder?',
-    answer: 'Our Terraform Template Builder is an AI-powered tool that helps you create secure, compliant, and optimized infrastructure-as-code templates for your cloud environments.'
+    "question": "What is the Secure Terraform Template Builder?",
+    "answer": "The Secure Terraform Template Builder is a web application designed to help users build, secure, and deploy cloud infrastructure using Terraform templates. The application leverages AI to generate Infrastructure as Code (IaC) from natural language inputs, ensuring secure and compliant configurations."
   },
   {
-    question: 'How does the AI suggestion feature work?',
-    answer: 'Our AI analyzes your infrastructure requirements and suggests optimizations based on best practices, security standards, and cost-efficiency guidelines.'
+    "question": "How does the natural language processing feature work?",
+    "answer": "You simply describe the infrastructure you need in plain English, and the app generates the corresponding Terraform code. This code can be inspected, shared, and validated before deployment."
   },
   {
-    question: 'Is the Personal tier suitable for professional use?',
-    answer: 'Yes, the Personal tier is perfect for individual developers or small projects. As your needs grow, you can easily upgrade to our Team or Enterprise tiers.'
+    "question": "What AI model do you use and how secure is it?",
+    "answer": "The AI model used in the Secure Terraform Template Builder is a fine-tuned GPT-4, specifically trained on validated sources to ensure accurate and secure outputs. For organizations that require additional security, there is also an option to integrate a customer-specific private model using platforms like Azure AI. This ensures that the AI operates within your secure environment, leveraging your organization's data and security protocols."
   },
   {
-    question: 'How often are the security templates updated?',
-    answer: 'We continuously update our security templates to reflect the latest best practices and emerging threats in cloud security.'
+    "question": "Can I share the Terraform templates with my team?",
+    "answer": "Yes, the app includes a feature that allows you to share templates with team members. You can collaborate in real-time and make sure everyone is on the same page before deploying the infrastructure."
+  },
+  {
+    "question": "How does the validation mechanism work?",
+    "answer": "The validation mechanism is a customizable feature that checks the Terraform code against your organization’s compliance and security standards. Only code that meets the criteria can be pushed, ensuring that your infrastructure remains secure and compliant."
+  },
+  {
+    "question": "Is it possible to cancel my subscription at any time?",
+    "answer": "Yes, you can cancel your subscription at any time. The process is straightforward, and you will not be charged for subsequent billing cycles after cancellation."
+  },
+  {
+    "question": "Can the solution be privately deployed within my organization?",
+    "answer": "Yes, the Secure Terraform Template Builder offers an option for private deployment. This allows the solution to be hosted within your organization's environment, ensuring that templates and infrastructure configurations are shared only locally and remain secure within your internal network."
+  },
+  {
+    "question": "What are some common use cases for this web app?",
+    "answer": "Startups: Quickly set up secure cloud infrastructure without a dedicated security team.\nEnterprise: Maintain consistency and compliance across multiple cloud environments.\nDevOps Teams: Integrate security best practices into your CI/CD pipeline.\nConsultants: Deliver secure, optimized cloud solutions to clients more efficiently."
+  },
+  {
+    "question": "What industries is this web app best suited for?",
+    "answer": "The Secure Terraform Template Builder is ideal for industries that require strict security and compliance, such as finance, healthcare, and technology, as well as any organization looking to streamline and secure their cloud infrastructure deployment."
+  },
+  {
+    "question": "How can I get started?",
+    "answer": "You can start by signing up for a free trial on the Secure Terraform Template Builder website. Once signed up, you can begin creating, securing, and deploying your cloud infrastructure in minutes."
   }
 ];
 
