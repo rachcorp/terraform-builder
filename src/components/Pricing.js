@@ -16,14 +16,14 @@ function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-gray-100">
+    <section id="pricing" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Simple, Transparent Pricing</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 ${
+              className={`bg-gray-50 p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 ${
                 plan.name === 'Pro' ? 'border-4 border-blue-500 relative overflow-hidden' : ''
               }`}
             >
@@ -59,7 +59,7 @@ function Pricing() {
             onClick={() => setIsTokenSectionOpen(!isTokenSectionOpen)}
             className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg font-bold transition-colors duration-300 hover:bg-blue-600 flex justify-between items-center"
           >
-            <span>Understanding Token Structure</span>
+            <span className="mx-auto">Understanding Token Structure</span>
             <svg
               className={`w-6 h-6 transform transition-transform duration-300 ${isTokenSectionOpen ? 'rotate-180' : ''}`}
               fill="none"
@@ -72,7 +72,7 @@ function Pricing() {
           </button>
           
           {isTokenSectionOpen && (
-            <div className="mt-8 bg-white p-6 rounded-lg shadow-md">
+            <div className="mt-8 bg-gray-50 p-6 rounded-lg shadow-md">
               <p className="mb-8 max-w-2xl mx-auto">
                 Tokens represent individual steps in an AI agent's plan. Each token is a discrete action that the agent takes to complete a task. Here's an example of how an AI agent might use tokens to tag resources in an account:
               </p>
@@ -86,7 +86,7 @@ function Pricing() {
               </div>
               <div className="mt-12 text-center">
                 <p className="text-lg font-semibold mb-4">Token Usage Example: Resource Tagging</p>
-                <div className="inline-flex items-center bg-gray-100 rounded-full px-4 py-2 shadow-md">
+                <div className="inline-flex items-center bg-white rounded-full px-4 py-2 shadow-md">
                   <span className="w-4 h-4 bg-blue-500 rounded-full mr-2"></span>
                   <span className="mr-4">List: 1 token</span>
                   <span className="w-4 h-4 bg-green-500 rounded-full mr-2"></span>

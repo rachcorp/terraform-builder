@@ -18,7 +18,7 @@ function App() {
       <HowItWorks />
       <Pricing />
       <PerfectFor />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <FAQ />
       <Footer />
     </div>

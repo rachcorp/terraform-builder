@@ -3,9 +3,9 @@ import './HowItWorks.css';
 
 function HowItWorks() {
   const steps = [
-    { title: 'Input Your Request', description: 'Describe your cloud management needs or issues you want to address.' },
-    { title: 'AI Analysis', description: 'Our AI agents analyze your infrastructure and identify optimization opportunities.' },
-    { title: 'Review & Approve', description: 'Review the proposed changes and approve the actions to be taken.' },
+    { title: 'Select an Agent', description: 'Describe your cloud management needs or issues you want to address.' },
+    { title: 'Receive a detailed Plan', description: 'Our AI agents analyze your infrastructure and identify optimization opportunities.' },
+    { title: 'Review & Approve the Plan', description: 'Review the proposed changes and approve the actions to be taken.' },
     { title: 'Execution & Results', description: 'AI agents implement the approved changes and provide detailed reports.' }
   ];
 
