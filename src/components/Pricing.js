@@ -59,7 +59,7 @@ function Pricing() {
             onClick={() => setIsTokenSectionOpen(!isTokenSectionOpen)}
             className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg font-bold transition-colors duration-300 hover:bg-blue-600 flex justify-between items-center"
           >
-            <span className="mx-auto">Understanding Token Structure</span>
+            <span className="mx-auto">More about Tokens</span>
             <svg
               className={`w-6 h-6 transform transition-transform duration-300 ${isTokenSectionOpen ? 'rotate-180' : ''}`}
               fill="none"
