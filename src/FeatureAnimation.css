@@ -1,0 +1,102 @@
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.circle {
+  position: absolute;
+  background: rgba(59, 130, 246, 0.1); /* Light blue color, adjust as needed */
+  border-radius: 50%;
+}
+
+.circle-1 {
+  width: 40px;
+  height: 40px;
+  left: 5%;
+  top: 10%;
+  animation: float 8s infinite;
+}
+
+.circle-2 {
+  width: 60px;
+  height: 60px;
+  right: 10%;
+  top: 35%;
+  animation: float 9s infinite;
+}
+
+.circle-3 {
+  width: 30px;
+  height: 30px;
+  left: 20%;
+  bottom: 15%;
+  animation: float 7s infinite;
+}
+
+.circle-4 {
+  width: 50px;
+  height: 50px;
+  right: 15%;
+  top: 5%;
+  animation: float 10s infinite;
+}
+
+.circle-5 {
+  width: 35px;
+  height: 35px;
+  left: 30%;
+  top: 50%;
+  animation: float 8.5s infinite;
+}
+
+.circle-6 {
+  width: 45px;
+  height: 45px;
+  right: 25%;
+  bottom: 20%;
+  animation: float 9.5s infinite;
+}
+
+.circle-7 {
+  width: 55px;
+  height: 55px;
+  left: 40%;
+  top: 20%;
+  animation: float 7.5s infinite;
+}
+
+.circle-8 {
+  width: 25px;
+  height: 25px;
+  right: 35%;
+  top: 60%;
+  animation: float 6.5s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(15px, 15px);
+  }
+  50% {
+    transform: translate(-15px, 25px);
+  }
+  75% {
+    transform: translate(20px, -15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* For dark mode */
+:root.dark .circle {
+  background: rgba(59, 130, 246, 0.2); /* Slightly more opaque for dark mode */
+}

@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Layout, Button, Card, List, Avatar, Switch } from './components/ui';
-import { CheckCircle, Star, Shield, Zap, ChevronDown, ChevronUp, Moon, Sun } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Layout, Button, Card, List, Avatar } from './components/ui';
+import { CheckCircle, Star, Shield, Users, ChevronDown, ChevronUp, Moon, Sun } from 'lucide-react';
+import './FeatureAnimation.css'; // We'll create this CSS file for the animations
 
 const features = [
-  { icon: <CheckCircle />, title: 'Secure Templates', description: 'Pre-built secure configurations to jumpstart your infrastructure' },
-  { icon: <Star />, title: 'AI-Powered Suggestions', description: 'Intelligent recommendations for optimizing your infrastructure' },
-  { icon: <Shield />, title: 'Compliance Ready', description: 'Meet industry standards with built-in compliance checks' },
-  { icon: <Zap />, title: 'Rapid Deployment', description: 'Deploy secure infrastructure in minutes, not hours' },
+  { icon: <CheckCircle />, title: 'Secure Templates', description: 'Pre-built secure configurations to jumpstart your infrastructure', image: '/images/secure-templates.png' },
+  { icon: <Star />, title: 'Effortless Customization', description: 'Simply describe your changes in plain English and let CloudAdvisor update the template for you. No Git, no fuss...', image: '/images/effortless-customization.png' },
+  { icon: <Shield />, title: 'Compliance Ready', description: 'Meet industry standards with built-in compliance checks', image: '/images/compliance-ready.png' },
+  { icon: <Users />, title: 'Collaborate with your team', description: 'Share and customize templates with your team members for seamless collaboration', image: '/images/team-collaboration.png' },
 ];
 
 const useCases = [
@@ -37,7 +38,7 @@ const faqs = [
   },
   {
     "question": "How does the validation mechanism work?",
-    "answer": "The validation mechanism is a customizable feature that checks the Terraform code against your organization’s compliance and security standards. Only code that meets the criteria can be pushed, ensuring that your infrastructure remains secure and compliant."
+    "answer": "The validation mechanism is a customizable feature that checks the Terraform code against your organization's compliance and security standards. Only code that meets the criteria can be pushed, ensuring that your infrastructure remains secure and compliant."
   },
   {
     "question": "Is it possible to cancel my subscription at any time?",
@@ -161,6 +162,16 @@ const RollingLogos = () => {
 export default function LandingPage() {
   const [darkMode, setDarkMode] = useState(false);
   const [yearlyBilling, setYearlyBilling] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState(0);
+
+  const nextFeature = useCallback(() => {
+    setCurrentFeature((prev) => (prev + 1) % features.length);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(nextFeature, 3000);
+    return () => clearInterval(timer);
+  }, [nextFeature]);
 
   useEffect(() => {
     if (darkMode) {
@@ -182,16 +193,39 @@ export default function LandingPage() {
     <Layout className={`min-h-screen transition-colors duration-300 ${darkMode ? 'dark bg-gray-900 text-white' : 'bg-white text-gray-800'}`}>
       <header className="container mx-auto py-16 text-center relative">
         <div className="absolute top-4 right-4 flex items-center">
-          <Switch
-            checked={darkMode}
-            onChange={() => setDarkMode(!darkMode)}
-          />
-          {darkMode ? <Moon className="ml-2" size={20} /> : <Sun className="ml-2" size={20} />}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className={`p-2 rounded-full transition-colors duration-300 ${
+              darkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
+            }`}
+            aria-label="Toggle dark mode"
+          >
+            {darkMode ? (
+              <Sun className="text-yellow-400" size={24} />
+            ) : (
+              <Moon className="text-gray-600" size={24} />
+            )}
+          </button>
         </div>
         <h1 className="text-5xl font-bold mb-4">Secure Terraform Template Builder</h1>
         <h2 className="text-3xl mb-4">AI-Powered Infrastructure as Code</h2>
         <p className="text-xl mb-8">Build, secure, and deploy your cloud infrastructure in minutes</p>
-        <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300">Start Free Trial</Button>
+        <div className="flex justify-center space-x-4">
+          <Button 
+            size="lg" 
+            className="bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300"
+            onClick={() => window.open("", "_blank", "noopener,noreferrer")}
+          >
+            Start Free Trial
+          </Button>
+          <Button 
+            size="lg" 
+            className={`bg-transparent border ${darkMode ? 'border-gray-300 text-gray-300 hover:bg-gray-700' : 'border-gray-400 text-gray-700 hover:bg-gray-100'} transition-colors duration-300`}
+            onClick={() => window.open("https://calendly.com/d/dnc-889-hh8/asecurecloud-meeting", "_blank", "noopener,noreferrer")}
+          >
+            Get a Demo
+          </Button>
+        </div>
       </header>
             
       <section className={`py-16 ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
@@ -200,14 +234,28 @@ export default function LandingPage() {
           <RollingLogos />
         </div>
       </section>
-      <section className={`py-16 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
-        <div className="container mx-auto">
+      <section className={`py-16 relative overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
+        <div className="animated-background">
+          <div className="circle circle-1"></div>
+          <div className="circle circle-2"></div>
+          <div className="circle circle-3"></div>
+          <div className="circle circle-4"></div>
+          <div className="circle circle-5"></div>
+          <div className="circle circle-6"></div>
+          <div className="circle circle-7"></div>
+          <div className="circle circle-8"></div>
+        </div>
+        <div className="container mx-auto relative z-10">
           <h2 className="text-3xl font-bold mb-12 text-center">Key Features</h2>
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 pr-8">
               <List className="space-y-6">
                 {features.map((feature, index) => (
-                  <div key={index} className="flex items-start">
+                  <div
+                    key={index}
+                    className={`flex items-start cursor-pointer ${index === currentFeature ? 'opacity-100' : 'opacity-50'}`}
+                    onClick={() => setCurrentFeature(index)}
+                  >
                     <Avatar className={`mr-4 ${darkMode ? 'bg-blue-700 text-white' : 'bg-blue-100 text-blue-600'} flex-shrink-0`}>
                       {feature.icon}
                     </Avatar>
@@ -220,14 +268,18 @@ export default function LandingPage() {
               </List>
             </div>
             <div className="md:w-1/2 mt-8 md:mt-0">
-              <video 
-                className="w-full rounded-lg shadow-lg" 
-                controls 
-                poster="/api/placeholder/640/360"
-              >
-                <source src="https://example.com/terraform-builder-demo.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <div className="relative w-full" style={{ paddingBottom: '60%' }}>
+                {features.map((feature, index) => (
+                  <img
+                    key={index}
+                    src={feature.image}
+                    alt={feature.title}
+                    className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-85 h-85 object-contain transition-opacity duration-300 ${
+                      index === currentFeature ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -251,12 +303,14 @@ export default function LandingPage() {
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Pricing Plans</h2>
           <div className="flex justify-center items-center mb-8">
-            <span className={`mr-3 ${yearlyBilling ? 'text-gray-400' : 'font-bold'}`}>Monthly</span>
-            <Switch
-              checked={yearlyBilling}
-              onChange={() => setYearlyBilling(!yearlyBilling)}
-            />
-            <span className={`ml-3 ${yearlyBilling ? 'font-bold' : 'text-gray-400'}`}>Yearly (Save 30%)</span>
+            <span className={`mr-3 ${yearlyBilling ? (darkMode ? 'text-gray-400' : 'text-gray-500') : 'font-bold'}`}>Monthly</span>
+            <button
+              onClick={() => setYearlyBilling(!yearlyBilling)}
+              className={`w-14 h-7 flex items-center rounded-full p-1 ${yearlyBilling ? 'bg-blue-600 justify-end' : 'bg-gray-300 justify-start'}`}
+            >
+              <div className={`bg-white w-5 h-5 rounded-full shadow-md transform duration-300 ease-in-out`}></div>
+            </button>
+            <span className={`ml-3 ${yearlyBilling ? 'font-bold' : (darkMode ? 'text-gray-400' : 'text-gray-500')}`}>Yearly (Save 30%)</span>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
