@@ -214,7 +214,7 @@ export default function LandingPage() {
           <Button 
             size="lg" 
             className="bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300"
-            onClick={() => window.open("", "_blank", "noopener,noreferrer")}
+            onClick={() => window.open("https://asecure.cloud/configuration-builder/", "_blank", "noopener,noreferrer")}
           >
             Start Free Trial
           </Button>
@@ -358,7 +358,13 @@ export default function LandingPage() {
 
       <section className="container mx-auto py-16 text-center">
         <h2 className="text-3xl font-bold mb-8">Ready to secure your infrastructure?</h2>
-        <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300">Get Started Now</Button>
+        <Button 
+          size="lg" 
+          className="bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300"
+          onClick={() => window.open("https://asecure.cloud/configuration-builder/", "_blank", "noopener,noreferrer")}
+        >
+          Get Started Now
+        </Button>
       </section>
     </Layout>
   );
