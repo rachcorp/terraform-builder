@@ -164,15 +164,6 @@ export default function LandingPage() {
   const [yearlyBilling, setYearlyBilling] = useState(false);
   const [currentFeature, setCurrentFeature] = useState(0);
 
-  const nextFeature = useCallback(() => {
-    setCurrentFeature((prev) => (prev + 1) % features.length);
-  }, []);
-
-  useEffect(() => {
-    const timer = setInterval(nextFeature, 3000);
-    return () => clearInterval(timer);
-  }, [nextFeature]);
-
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
@@ -246,22 +237,38 @@ export default function LandingPage() {
           <div className="circle circle-8"></div>
         </div>
         <div className="container mx-auto relative z-10">
-          <h2 className="text-3xl font-bold mb-12 text-center">Key Features</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center">Key Features</h2>
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 pr-8">
-              <List className="space-y-6">
+              <List className="space-y-8">
                 {features.map((feature, index) => (
                   <div
                     key={index}
-                    className={`flex items-start cursor-pointer ${index === currentFeature ? 'opacity-100' : 'opacity-50'}`}
+                    className={`flex items-start cursor-pointer transition-all duration-300 ${
+                      index === currentFeature 
+                        ? 'opacity-100 scale-105 transform' 
+                        : 'opacity-70 hover:opacity-90'
+                    }`}
                     onClick={() => setCurrentFeature(index)}
                   >
-                    <Avatar className={`mr-4 ${darkMode ? 'bg-blue-700 text-white' : 'bg-blue-100 text-blue-600'} flex-shrink-0`}>
-                      {feature.icon}
+                    <Avatar className={`mr-4 ${
+                      darkMode 
+                        ? 'bg-blue-600 text-white' 
+                        : 'bg-blue-100 text-blue-600'
+                    } flex-shrink-0 w-12 h-12 flex items-center justify-center`}>
+                      {React.cloneElement(feature.icon, { size: 24 })}
                     </Avatar>
                     <div>
-                      <h3 className="font-bold mb-2">{feature.title}</h3>
-                      <p>{feature.description}</p>
+                      <h3 className={`font-bold text-xl mb-2 ${
+                        index === currentFeature 
+                          ? (darkMode ? 'text-blue-400' : 'text-blue-600') 
+                          : ''
+                      }`}>
+                        {feature.title}
+                      </h3>
+                      <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                        {feature.description}
+                      </p>
                     </div>
                   </div>
                 ))}
