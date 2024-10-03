@@ -116,10 +116,10 @@ const LandingPage = () => {
       <section className="h-[50vh] flex items-center justify-center bg-white text-gray-800">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            AI-Powered CSPM for <span className="text-blue-600">{cloudProvider}</span>
+            The AI-Powered CSPM for <span className="text-blue-600">{cloudProvider}</span>
           </h2>
           <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto">
-            Augment your team with adaptive security and remediation, ensuring continuous protection and compliance across your cloud environment at scale.
+            Augment your team with adaptive security and remediation, ensuring continuous protection and compliance across your cloud environment at any scale.
           </p>
           <div className="space-x-4 mt-8">
             <a href="#demo" className="bg-blue-600 text-white px-6 py-3 rounded-full font-bold text-lg hover:bg-blue-700 transition duration-300">Get a Demo</a>
@@ -143,9 +143,10 @@ const LandingPage = () => {
               muted 
               playsInline
               controls
+              src="/videos/ai-powered-platform.mp4"
               poster="/images/ai-powered-platform-poster.jpg"
             >
-              <source src="/videos/ai-powered-platform.mp4" type="video/mp4" />
+              {/* <source src="/videos/ai-powered-platform.mp4" type="video/mp4" /> */}
               Your browser does not support the video tag.
             </video>
           </div>
