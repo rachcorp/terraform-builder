@@ -68,22 +68,30 @@ const LandingPage = () => {
     }
   ];
 
-  const faqData = [
+  const faqItems = [
     {
-      question: "What is AI-powered CSPM?",
-      answer: "AI-powered Cloud Security Posture Management (CSPM) uses artificial intelligence to continuously monitor and improve your cloud security. It allows you to interact with your security data using natural language, provides intelligent recommendations, and automates compliance reporting."
+      question: "What cloud providers does ASecureCloud support?",
+      answer: "ASecureCloud supports major cloud providers including Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)."
     },
     {
-      question: "Which cloud providers does ASecureCloud support?",
-      answer: "ASecureCloud provides comprehensive coverage for Azure, AWS, and GCP, allowing you to manage multi-cloud environments from a single platform."
+      question: "How does ASecureCloud ensure the security of my cloud environment?",
+      answer: "ASecureCloud uses AI-powered continuous monitoring, real-time threat detection, and automated remediation to ensure the security of your cloud environment. It also provides compliance checks and best practice recommendations."
     },
     {
-      question: "How does the AI-powered platform work?",
-      answer: "Our AI-powered platform allows you to ask questions about your cloud environment in plain English. The AI analyzes your security data and provides detailed answers, context-aware recommendations, and actionable insights."
+      question: "Can ASecureCloud integrate with my existing security tools?",
+      answer: "Yes, ASecureCloud is designed to integrate seamlessly with many popular security tools and SIEM solutions, enhancing your existing security infrastructure."
     },
     {
-      question: "What types of compliance reports does ASecureCloud generate?",
-      answer: "ASecureCloud generates comprehensive compliance reports for various frameworks relevant to Azure, AWS, and GCP. These automated reports keep you audit-ready and help streamline your compliance process across multiple cloud environments."
+      question: "Which AI model does ASecureCloud use for its security analysis?",
+      answer: "ASecureCloud utilizes a proprietary, state-of-the-art large language model specifically trained on cloud security data and best practices. This model is continuously updated to stay ahead of emerging threats and new cloud features."
+    },
+    {
+      question: "How is my data safeguarded when using ASecureCloud?",
+      answer: "We take data security very seriously. All data is encrypted in transit and at rest using industry-standard encryption protocols. We employ strict access controls, regular security audits, and adhere to data protection regulations such as GDPR and CCPA. Our systems are designed with a 'least privilege' principle to ensure data is only accessed when necessary for providing our services."
+    },
+    {
+      question: "Is there an option for private deployment to maintain complete data control?",
+      answer: "Yes, we offer a private deployment option for enterprises that require complete control over their data. This option allows you to host ASecureCloud within your own infrastructure, ensuring that all data and processing remain within your controlled environment. Our team can work with you to set up and maintain this private deployment, tailored to your specific security and compliance requirements."
     }
   ];
 
@@ -207,18 +215,24 @@ const LandingPage = () => {
       <section id="faq" className="py-16 bg-gray-100">
         <div className="container mx-auto">
           <h3 className="text-3xl font-bold text-center mb-12 text-black">Frequently Asked Questions</h3>
-          <div className="space-y-4">
-            {faqData.map((faq, index) => (
-              <div key={index} className="border-b border-gray-200 pb-4">
+          <div className="space-y-6">
+            {faqItems.map((item, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-md p-6">
                 <button
                   className="flex justify-between items-center w-full text-left"
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                 >
-                  <span className="text-lg font-semibold">{faq.question}</span>
-                  <span className="text-blue-500">{openFaq === index ? '-' : '+'}</span>
+                  <span className="font-semibold text-lg">{item.question}</span>
+                  <span className="text-blue-500">
+                    {openFaq === index ? (
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
+                    ) : (
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                    )}
+                  </span>
                 </button>
                 {openFaq === index && (
-                  <p className="mt-2 text-gray-600">{faq.answer}</p>
+                  <p className="mt-4 text-gray-600">{item.answer}</p>
                 )}
               </div>
             ))}
