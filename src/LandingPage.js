@@ -144,7 +144,7 @@ const LandingPage = () => {
               playsInline
               controls
               src="/videos/ai-powered-platform.mp4"
-              poster="/images/ai-powered-platform-poster.jpg"
+              // poster="/images/ai-powered-platform-poster.jpg"
             >
               {/* <source src="/videos/ai-powered-platform.mp4" type="video/mp4" /> */}
               Your browser does not support the video tag.
