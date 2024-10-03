@@ -288,5 +288,3 @@ const PricingCard = ({ title, price, period, features, buttonText, popular }) =>
 );
 
 export default LandingPage;
-```
-</rewritten_file>
