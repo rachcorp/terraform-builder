@@ -143,7 +143,8 @@ const LandingPage = () => {
               muted 
               playsInline
               controls
-              // src="/videos/ai-powered-platform.mp4"
+              src="/path/to/your/video.mp4"
+              onError={(e) => console.error('Video error:', e)}
               // poster="/images/ai-powered-platform-poster.jpg"
             >
               <source src="/videos/ai-powered-platform.mp4" type="video/mp4" />
@@ -287,3 +288,5 @@ const PricingCard = ({ title, price, period, features, buttonText, popular }) =>
 );
 
 export default LandingPage;
+```
+</rewritten_file>
