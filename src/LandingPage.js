@@ -143,12 +143,12 @@ const LandingPage = () => {
               muted 
               playsInline
               controls
-              src="/path/to/your/video.mp4"
+              src="/videos/ai-powered-platform.mp4"
               onError={(e) => console.error('Video error:', e)}
               // poster="/images/ai-powered-platform-poster.jpg"
             >
-              <source src="/videos/ai-powered-platform.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
+              
+              
             </video>
           </div>
         </div>
