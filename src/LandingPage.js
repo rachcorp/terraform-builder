@@ -188,8 +188,12 @@ const LandingPage = () => {
           <p className="text-lg mb-6 max-w-3xl mx-auto text-black">
             Leverage agentless workload scanning and data loss prevention across Azure, AWS, and GCP. Our cloud-native approach ensures maximum ROI while avoiding performance and scalability limitations typical of traditional tools.
           </p>
-          <div className="w-full h-64 rounded-lg overflow-hidden">
-            <img src="/images/cloud-native-cspm.gif" alt="Cloud-Native CSPM" className="w-full h-full object-cover" />
+          <div className="w-full overflow-hidden">
+            <img 
+              src="/images/cloud-native-cspm.gif" 
+              alt="Cloud-Native CSPM Demonstration" 
+              className="w-full"
+            />
           </div>
         </div>
       </section>
