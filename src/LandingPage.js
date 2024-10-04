@@ -173,18 +173,11 @@ const LandingPage = () => {
             Generate maturity and compliance reports with ease. Streamline your compliance process across Azure, AWS, and GCP with automated reporting that keeps you audit-ready at all times.
           </p>
           <div className="w-full overflow-hidden">
-            <video 
-              className="w-full" 
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              controls
-              poster="/images/comprehensive-reporting-poster.jpg"
-            >
-              <source src="videos/reports.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <img 
+              src="/images/comprehensive-reporting.gif" 
+              alt="Comprehensive Reporting Demonstration" 
+              className="w-full"
+            />
           </div>
         </div>
       </section>
