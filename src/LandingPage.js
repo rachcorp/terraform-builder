@@ -156,12 +156,16 @@ const LandingPage = () => {
 
       <section className="py-16 bg-green-50">
         <div className="container mx-auto text-center">
-          <h3 className="text-3xl md:text-4xl font-bold mb-4 text-black">AI-Driven Recommendations</h3>
+          <h3 className="text-3xl md:text-4xl font-bold mb-4 text-black">Collaborate with AI to Fix Findings</h3>
           <p className="text-lg mb-6 max-w-3xl mx-auto text-black">
-            Get context-aware recommendations and reduce false positives. Our intelligent insights analyze your environment to provide actionable advice, helping you make informed decisions quickly and efficiently.
+            Receive context-rich alerts to reduce fatigue and ask follow-up questions as needed. AI provides you with step-by-step instructions in both code and console for fast resolution of security findings.
           </p>
-          <div className="w-full h-64 rounded-lg overflow-hidden">
-            <img src="/images/ai-driven-recommendations.gif" alt="AI-Driven Recommendations" className="w-full h-full object-cover" />
+          <div className="w-full overflow-hidden">
+            <img 
+              src="/images/ai-collaboration.png" 
+              alt="AI Collaboration for Security Findings" 
+              className="w-full rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </section>
