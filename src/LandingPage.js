@@ -70,28 +70,28 @@ const LandingPage = () => {
 
   const faqItems = [
     {
-      question: "What cloud providers does ASecureCloud support?",
-      answer: "ASecureCloud supports major cloud providers including Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)."
+      question: "What cloud providers are supported?",
+      answer: "Hyperscalers including Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) are currently supported."
+    },
+    // {
+    //   question: "How does ASecureCloud ensure the security of my cloud environment?",
+    //   answer: "ASecureCloud uses AI-powered continuous monitoring, real-time threat detection, and automated remediation to ensure the security of your cloud environment. It also provides compliance checks and best practice recommendations."
+    // },
+    // {
+    //   question: "Can ASecureCloud integrate with my existing security tools?",
+    //   answer: "Yes, ASecureCloud is designed to integrate seamlessly with many popular security tools and SIEM solutions, enhancing your existing security infrastructure."
+    // },
+    {
+      question: "Which AI model(s) are used?",
+      answer: " We utilize a combination of fine-tuned models based on GPT4. The model receives sanitized input and are never exposed to customer data."
+    },
+      {
+      question: "How is data safeguarded?",
+      answer: "The AI models serve as a natural language interface for users to interact with our platform. User queries are processed through a fine-tuned GPT-4 instance, which generates structured JSON responses. These responses are then used to retrieve and display relevant information from our infrastructure. This approach ensures that there is no direct interaction between the AI models and user data, maintaining a secure separation between the two."
     },
     {
-      question: "How does ASecureCloud ensure the security of my cloud environment?",
-      answer: "ASecureCloud uses AI-powered continuous monitoring, real-time threat detection, and automated remediation to ensure the security of your cloud environment. It also provides compliance checks and best practice recommendations."
-    },
-    {
-      question: "Can ASecureCloud integrate with my existing security tools?",
-      answer: "Yes, ASecureCloud is designed to integrate seamlessly with many popular security tools and SIEM solutions, enhancing your existing security infrastructure."
-    },
-    {
-      question: "Which AI model does ASecureCloud use for its security analysis?",
-      answer: "ASecureCloud utilizes a proprietary, state-of-the-art large language model specifically trained on cloud security data and best practices. This model is continuously updated to stay ahead of emerging threats and new cloud features."
-    },
-    {
-      question: "How is my data safeguarded when using ASecureCloud?",
-      answer: "We take data security very seriously. All data is encrypted in transit and at rest using industry-standard encryption protocols. We employ strict access controls, regular security audits, and adhere to data protection regulations such as GDPR and CCPA. Our systems are designed with a 'least privilege' principle to ensure data is only accessed when necessary for providing our services."
-    },
-    {
-      question: "Is there an option for private deployment to maintain complete data control?",
-      answer: "Yes, we offer a private deployment option for enterprises that require complete control over their data. This option allows you to host ASecureCloud within your own infrastructure, ensuring that all data and processing remain within your controlled environment. Our team can work with you to set up and maintain this private deployment, tailored to your specific security and compliance requirements."
+      question: "Is there an option for private deployment for complete data control?",
+      answer: "We provide a private deployment option for organizations requiring full data control or specific data residency. This solution allows you to host the entire application, including AI models, within your infrastructure. It ensures all data and processing remain in your controlled environment. Our team can assist with setup and maintenance, tailoring the deployment to your security and compliance needs."
     }
   ];
 
@@ -136,20 +136,11 @@ const LandingPage = () => {
             Ask questions in natural language and receive detailed answers about your environment. Enjoy intuitive interaction without learning complex interfaces. Simply communicate in plain English to get the insights you need.
           </p>
           <div className="w-full overflow-hidden">
-            <video 
-              className="w-full" 
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              controls
-              src="/videos/ai-powered-platform.mp4"
-              onError={(e) => console.error('Video error:', e)}
-              // poster="/images/ai-powered-platform-poster.jpg"
-            >
-              
-              
-            </video>
+            <img 
+              src="/images/ai-powered-platform.gif" 
+              alt="AI-Powered Platform Demonstration" 
+              className="w-full rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </section>
