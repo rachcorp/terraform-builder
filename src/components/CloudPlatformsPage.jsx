@@ -6,22 +6,22 @@ const CloudPlatformsPage = () => {
   const platforms = [
     {
       name: 'Amazon Web Services',
-      imagePath: '/images/aws-logo.png',
+      imagePath: '/images/AWS-p-1080.png',
       description: 'Comprehensive security monitoring and compliance automation for AWS environments. Our platform seamlessly integrates with AWS Security Hub, CloudWatch, and GuardDuty to provide real-time threat detection and response.'
     },
     {
       name: 'Microsoft Azure',
-      imagePath: '/images/azure-logo.png',
+      imagePath: '/images/Azure-p-1080.png',
       description: 'Enhanced security visibility and control for Azure workloads. Integrate directly with Azure Security Center and Azure Monitor to maintain continuous compliance and protect your cloud resources.'
     },
     {
       name: 'Google Cloud Platform',
-      imagePath: '/images/gcp-logo.png',
+      imagePath: '/images/GCP-p-1080.png',
       description: 'Advanced security operations for GCP environments. Leverage Security Command Center integration and Cloud Monitoring to ensure your GCP infrastructure remains secure and compliant.'
     },
     {
       name: 'Kubernetes',
-      imagePath: '/images/kubernetes-logo.png',
+      imagePath: '/images/Kubernetes-p-1080.png',
       description: 'Container-native security for Kubernetes clusters across any cloud provider. Monitor container security posture, detect threats, and enforce compliance policies across your container ecosystem.'
     }
   ];
@@ -33,7 +33,7 @@ const CloudPlatformsPage = () => {
     },
     {
       question: 'What about other cloud providers and on-premises infrastructure?',
-      answer: 'While we currently focus on AWS, Azure, GCP, and Kubernetes, we are actively developing support for additional cloud providers and on-premises infrastructure. Our roadmap includes Oracle Cloud, IBM Cloud, and major private cloud platforms. Our Kubernetes support already enables security monitoring for many on-premises workloads.'
+      answer: 'While we currently focus on AWS, Azure, GCP, and Kubernetes, we are actively developing support for additional cloud providers and on-premises infrastructure. Our roadmap includes Oracle Cloud, IBM Cloud, and major private cloud platforms.'
     },
     {
       question: 'How does the onboarding process work?',
@@ -45,7 +45,7 @@ const CloudPlatformsPage = () => {
     },
     {
       question: 'What compliance frameworks do you support?',
-      answer: 'We support major frameworks including SOC 2, ISO 27001, HIPAA, PCI DSS, and CIS Benchmarks across all supported cloud providers. Our compliance mapping engine automatically correlates controls across different frameworks.'
+      answer: 'We support major frameworks including SOC 2, ISO 27001, HIPAA, PCI DSS, and CIS Benchmarks across all supported cloud providers.'
     }
   ];
 
