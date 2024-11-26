@@ -7,22 +7,22 @@ const CloudPlatformsPage = () => {
     {
       name: 'Amazon Web Services',
       imagePath: '/images/AWS-p-1080.png',
-      description: 'Comprehensive security monitoring and compliance automation for AWS environments. Our platform seamlessly integrates with AWS Security Hub, CloudWatch, and GuardDuty to provide real-time threat detection and response.'
+      description: 'Comprehensive security monitoring and compliance automation for AWS environments. Supports AWS Organizations and multiple accounts to get a unified view of your AWS security posture and compliance status.'
     },
     {
       name: 'Microsoft Azure',
       imagePath: '/images/Azure-p-1080.png',
-      description: 'Enhanced security visibility and control for Azure workloads. Integrate directly with Azure Security Center and Azure Monitor to maintain continuous compliance and protect your cloud resources.'
+      description: 'Enhanced security visibility and control for Azure workloads. Supports Microsoft Entra, M365, Subscriptions and Management Groups to get a unified view of your Azure security posture and compliance status.'
     },
     {
       name: 'Google Cloud Platform',
       imagePath: '/images/GCP-p-1080.png',
-      description: 'Advanced security operations for GCP environments. Leverage Security Command Center integration and Cloud Monitoring to ensure your GCP infrastructure remains secure and compliant.'
+      description: 'Perfect for AWS and Azure users using GCP as second cloud provider. Supports GCP projects to get a unified view of your GCP security posture and compliance status.'
     },
     {
       name: 'Kubernetes',
       imagePath: '/images/Kubernetes-p-1080.png',
-      description: 'Container-native security for Kubernetes clusters across any cloud provider. Monitor container security posture, detect threats, and enforce compliance policies across your container ecosystem.'
+      description: 'Container-native security for Kubernetes clusters across any cloud provider. Monitor container security posture, detect threats, and monitor compliance status across your container ecosystem.'
     }
   ];
 
@@ -45,7 +45,7 @@ const CloudPlatformsPage = () => {
     },
     {
       question: 'What compliance frameworks do you support?',
-      answer: 'We support major frameworks including SOC 2, ISO 27001, HIPAA, PCI DSS, and CIS Benchmarks across all supported cloud providers.'
+      answer: 'We support a wide range of compliance frameworks including CIS AWS Foundations Benchmark, SOC2, ISO 27001, General Data Protection Regulation (GDPR), PCI DSS v3.2.1, NIST 800-53, NIST 800-171, NIST CSF, HIPAA, FedRAMP (Low) and FedRAMP (Moderate), Canada GC & PBMM Controls, and more.'
     }
   ];
 
